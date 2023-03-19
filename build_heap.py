@@ -8,15 +8,15 @@ def build_heap(data):
     for i in range(n // 2 - 1, -1, -1):
         j = i
         while True:
-            k =2*j + 1
-            if k >= n:
+            o =2*j + 1
+            if o >= n:
                 break
-            if k +1 < n and data[k + 1] < data[k]:
-                k += 1
-            if data[j] > data[k]:
-                swaps.append((j, k))
-                data[j], data[k] = data[k], data[j]
-                j = k
+            if o +1 < n and data[o + 1] < data[o]:
+                o += 1
+            if data[j] > data[o]:
+                swaps.append((j, o))
+                data[j], data[o] = data[o], data[j]
+                j = o
             else:
                 break  
   
@@ -52,3 +52,5 @@ def main():
  
 if __name__ == "__main__":
     main()
+  
+  #Igors Vlaskins 16.grupa
